@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cart</title>
+    <style>
+        img{
+            width: 300px;
+        }
+        .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        } 
+
+        /* Add some padding inside the card container */
+        .container {
+            padding: 2px 16px;
+        }
+        #linkText{
+            position: absolute;
+            left: 400px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Select the items</h1>
+    <!-- <h2>Indian Food</h2> -->
+    <div class="card">
+        <img src="./resources/img/meal-image1.jpg" alt="">
+        <div class="container">
+            <h4><b>Pizza</b></h4>
+            <p>price-350 &#8377</p>
+            <input type="checkbox">
+        </div>
+    </div>
+    <div class="card">
+        <img src="./resources/img/meal-image5.jpg" alt="">
+        <div class="container">
+            <h4><b>Chicken Churry</b></h4>
+            <p>Price-450 &#8377</p>
+            <input type="checkbox">
+        </div>
+    </div>
+    <div class="card">
+        <img src="./resources/img/meal-image2.jpg" alt="">
+        <div class="container">
+            <h4><b>Birayani</b></h4>
+            <p>Price-500 &#8377</p>
+            <input type="checkbox">
+        </div>
+    </div>
+    <div class="card">
+        <img src="./resources/img/meal-image3.jpg" alt="">
+        <div class="container">
+            <h4><b>Daal Fry</b></h4>
+            <p>Price 450 &#8377</p>
+            <input type="checkbox">
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <a id="linkText" href="/sign-in/cart/order"><button>Place The Order</button></a>
+</body>
+
+</html>

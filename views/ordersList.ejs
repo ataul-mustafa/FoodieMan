@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li,
+        p {
+            display: inline-block;
+        }
+        .th{
+            font-weight: bold;
+        }
+        td{
+            width: 300px;
+            border-left: 1px solid red;
+            border-top: 1px solid red;
+            padding: 10px;
+            color: aqua;
+            background-color: rgb(15, 15, 145);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Orders</h1>
+    <table>
+        <tr>
+            <td class="th">Sr. No. </td>
+            <td class="th">Name </td>
+            <td class="th">Email</td>
+            <td class="th">City</td>
+            <td class="th">Zip</td>
+        </tr>
+        <% i=0; %>
+        <% order.forEach((item)=>{ %>
+            <% i++; %>
+            <tr>
+                <td><%= i %></td>
+            <% Array.from(Object.keys(item)).forEach((key)=>{ %>
+                    <% if(key == 'name' || key == 'email' || key == 'City' || key == 'Zip'){ %>
+                        <td><%= item[key] %></td>
+                    <% } %>
+            <% }) %>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+
+</html>
